@@ -53,7 +53,7 @@ app.get("/remove/:id",(req,res)=>{
 });
 mongoose.set("useFindAndModify", false);
 mongoose.set("useNewUrlParser", true);
- mongoose.connect(process.env.secret_URL,{useUnifiedTopology:true},
+ mongoose.connect("mongodb+srv://shreya:shreya@cluster0.9iyzz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{useUnifiedTopology:true},
    (err,db)=>{
         if(err) throw err;
         console.log("the connection established successfully");
